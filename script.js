@@ -44,7 +44,7 @@ async function generateTicket() {
     doc.setLineDash([]);
 
     // Logo (your Ministers pilot pic)
-    const logo = await loadImage("/js/scade.jpg");
+    const logo = await loadImage("scade.jpg");
     doc.addImage(logo, "JPEG", 15, 12, 18, 14);
 
     // Header text
@@ -57,7 +57,7 @@ async function generateTicket() {
     doc.setTextColor(0, 0, 0);
 
     // Background watermark (tiled logo, faint)
-    const pattern = await loadImage("/js/scade.jpg");
+    const pattern = await loadImage("scade.jpg");
     doc.setGState(new doc.GState({ opacity: 0.08 })); // transparency
     for (let x = 30; x < 270; x += 60) {
       for (let y = 30; y < 100; y += 40) {
