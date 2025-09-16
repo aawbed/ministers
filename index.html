@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministers Airlines – Check-in</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="cloud.js"></script>
+</head>
+<body>
+     <canvas id="cloudCanvas"></canvas>
+     <div class="cloud"></div>
+    <div class="cloud" style="top:150px; animation-duration: 80s;"></div>
+    <div class="cloud" style="top:250px; animation-duration: 100s;"></div>
+    <div id ="app">
+  <header>
+    <img src="/js/scade.jpg" alt="Ministers Airlines Logo" class="logo">
+    <h1>Ministers Airlines – Check-in</h1>
+  </header>
+
+  <main>
+    <section class="checkin-card">
+      <h2>Passenger Check-in</h2>
+      <form id="checkinForm">
+        <label for="name">Passenger Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <p>Select Activities:</p>
+        <label><input type="checkbox" value="Chana Jaba"> Chana Jaba</label><br>
+        <label><input type="checkbox" value="Smoke Weed"> Smoke Weed</label><br>
+        <label><input type="checkbox" value="Drink Liquor"> Drink Liquor</label><br>
+        <label><input type="checkbox" value="Wine Tails"> Wine Tails</label><br>
+
+        <button type="button" onclick="generateTicket()">Generate Boarding Pass</button>
+      </form>
+    </section>
+
+    <section id="boardingScreen">
+      <h2>Now Boarding: Flight MNS420</h2>
+      <p id="boardingMessage">Welcome, Ministers ✈️</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Ministers Airlines 2025 | All rights reserved</p>
+  </footer>
+  <!-- Loader modal -->
+<div id="loader" class="loader-overlay">
+  <div class="loader-box">
+    <p>Generating Boarding Pass...</p>
+    <div class="spinner"></div>
+  </div>
+</div>
+</div>
+</body>
+</html>
